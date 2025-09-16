@@ -56,6 +56,7 @@ export const AppointmentModal = ({
           type={type}
           appointment={appointment}
           setOpen={setOpen}
+          timeZone={new Date().toString()}
         />
       </DialogContent>
     </Dialog>
