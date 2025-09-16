@@ -26,12 +26,14 @@ export const AppointmentForm = ({
   userId,
   patientId,
   type = "create",
+  timeZone,
   appointment,
   setOpen,
 }: {
   userId: string;
   patientId: string;
   type: "create" | "schedule" | "cancel";
+  timeZone: string;
   appointment?: Appointment;
   setOpen?: Dispatch<SetStateAction<boolean>>;
 }) => {
@@ -101,6 +103,7 @@ export const AppointmentForm = ({
             cancellationReason: values.cancellationReason,
           },
           type,
+          timeZone,
         };
 
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
