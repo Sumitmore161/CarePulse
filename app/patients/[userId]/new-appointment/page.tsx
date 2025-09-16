@@ -22,7 +22,7 @@ const Appointment = async ({ params: { userId } }: SearchParamProps) => {
             patientId={patient?.$id}
             userId={userId}
             type="create"
-            timeZone={new Date().toString()}
+            timeZone="timeZone"
           />
 
           <p className="copyright mt-10 py-12">© 2024 CarePluse</p>
